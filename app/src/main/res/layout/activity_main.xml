@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mck.memoryleakexample.MainActivity">
+
+    <Button
+        android:text="@string/static_inner_class_leak"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:id="@+id/bStaticInnerClassLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bStaticViewLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bStaticViewLeak"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bStaticViewLeak"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:text="@string/static_view_leak"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/bStaticViewLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bStaticActivityLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/bHandlerLeak"
+        android:layout_marginTop="51dp"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bStaticActivityLeak"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/bTimerTaskLeak"
+        android:layout_marginBottom="51dp"
+        tools:layout_constraintBottom_creator="1" />
+
+    <Button
+        android:text="@string/static_activity_leak"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/bStaticActivityLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bNextActivity"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toLeftOf="@+id/bHandlerLeak"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/bStaticViewLeak"
+        tools:layout_constraintBottom_creator="1" />
+
+    <Button
+        android:text="@string/sensor_manager_leak"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:id="@+id/bSensorManagerLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bTimerTaskLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bTimerTaskLeak"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bTimerTaskLeak"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:text="@string/thread_leak"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:id="@+id/bThreadLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bHandlerLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bHandlerLeak"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bHandlerLeak"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:text="@string/timer_task_leak"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:id="@+id/bTimerTaskLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bThreadLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bThreadLeak"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bThreadLeak"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:text="@string/handler_leak"
+        android:layout_width="166dp"
+        android:layout_height="0dp"
+        android:id="@+id/bHandlerLeak"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="94dp"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:text="@string/start_next_activity"
+        android:layout_width="166dp"
+        android:layout_height="50dp"
+        android:id="@+id/bNextActivity"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="44dp"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/bHandlerLeak"
+        android:layout_marginBottom="51dp"
+        tools:layout_constraintBottom_creator="1" />
+
+    <Button
+        android:text="@string/anonymous_class_leak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bAnonymousClassLeak"
+        app:layout_constraintLeft_toLeftOf="@+id/bStaticInnerClassLeak"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/bStaticInnerClassLeak"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/bStaticInnerClassLeak"
+        tools:layout_constraintRight_creator="1" />
+
+</android.support.constraint.ConstraintLayout>
